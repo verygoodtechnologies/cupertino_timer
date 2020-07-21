@@ -35,7 +35,7 @@ class TimerPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(TimerPainter oldDelegate) {
-    return animation.value != oldDelegate.animation.value;
+  bool shouldRepaint(TimerPainter old) {
+    return animation.value != old.animation.value;
   }
 }

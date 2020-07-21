@@ -2,7 +2,6 @@ library cupertino_timer;
 
 import 'package:flutter/material.dart';
 
-import 'timer_controller.dart';
 import 'timer_painter.dart';
 
 class CupertinoTimer extends StatefulWidget {
@@ -18,9 +17,9 @@ class CupertinoTimer extends StatefulWidget {
 
   final Duration duration;
 
-  final bool startOnInit;
-
   final void Function(Duration timeElapsed) valueListener;
+
+  final bool startOnInit;
 
   final TextStyle timeStyle;
 
@@ -36,19 +35,20 @@ class CupertinoTimer extends StatefulWidget {
 
 class CupertinoTimerState extends State<CupertinoTimer>
     with SingleTickerProviderStateMixin {
-  TimerController controller;
+  AnimationController controller;
 
-  bool wasActive = false;
+  bool running = false;
 
   @override
   void initState() {
-    controller = TimerController(this);
+    controller = AnimationController(vsync: this);
 
     controller.duration = widget.duration;
     controller.addListener(_animationValueListener);
     controller.addStatusListener(_animationStatusListener);
     if (widget.startOnInit) {
-      controller.start();
+      controller.forward();
+      running = true;
     }
     super.initState();
   }
@@ -57,10 +57,12 @@ class CupertinoTimerState extends State<CupertinoTimer>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (!controller.wasActive) {
-          controller.start();
-        } else if (controller.wasActive) {
-          controller.pause();
+        if (!running) {
+          controller.forward();
+          running = true;
+        } else if (running) {
+          controller.stop();
+          running = false;
         }
       },
       child: Container(
@@ -116,9 +118,9 @@ class CupertinoTimerState extends State<CupertinoTimer>
 
   void _animationStatusListener(AnimationStatus status) {
     if (status == AnimationStatus.forward) {
-      wasActive = true;
+      running = true;
     } else if (status == AnimationStatus.dismissed) {
-      wasActive = false;
+      running = false;
     }
   }
 
