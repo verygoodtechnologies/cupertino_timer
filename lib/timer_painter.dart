@@ -10,10 +10,7 @@ class TimerPainter extends CustomPainter {
   Color ringColor;
   double ringStroke;
 
-  TimerPainter(
-      {this.animation,
-      this.ringColor,
-      this.ringStroke})
+  TimerPainter({this.animation, this.ringColor, this.ringStroke})
       : super(repaint: animation);
 
   @override
@@ -29,7 +26,8 @@ class TimerPainter extends CustomPainter {
 
     canvas.drawCircle(size.center(Offset.zero), radius, paint);
 
-    Rect rect = Rect.fromCircle(center: size.center(Offset.zero), radius: radius);
+    Rect rect =
+        Rect.fromCircle(center: size.center(Offset.zero), radius: radius);
     paint.color = ringColor;
     canvas.drawArc(rect, start, sweep, false, paint);
   }

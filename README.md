@@ -17,6 +17,7 @@ CupertinoTimer(
     timeStyle: new TextStyle(fontSize: 24),
     startOnInit: true,
     ringColor: Colors.blue,
-    ringStroke: 2
-    )
+    ringStroke: 2)
 ```
+
+

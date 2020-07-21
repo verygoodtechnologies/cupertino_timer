@@ -93,8 +93,7 @@ class CupertinoTimerState extends State<CupertinoTimer>
                       child: AnimatedBuilder(
                           animation: controller,
                           builder: (context, child) {
-                            return Text(getText(),
-                                style: widget.timeStyle);
+                            return Text(getText(), style: widget.timeStyle);
                           }),
                     ),
                   ),
