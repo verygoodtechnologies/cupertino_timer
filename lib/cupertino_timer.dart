@@ -92,8 +92,15 @@ class CupertinoTimerState extends State<CupertinoTimer>
                     child: AnimatedBuilder(
                         animation: controller,
                         builder: (context, child) {
-                          return Text(getText(), style: TextStyle(fontFeatures: [FontFeature.tabularFigures()],
-                                                                          fontSize: MediaQuery.of(context).size.width * 100).merge(widget.timeStyle));
+                          return Text(getText(),
+                              style: TextStyle(
+                                      fontFeatures: [
+                                    FontFeature.tabularFigures()
+                                  ],
+                                      fontSize:
+                                          MediaQuery.of(context).size.width *
+                                              100)
+                                  .merge(widget.timeStyle));
                         }),
                   ),
                 ),
