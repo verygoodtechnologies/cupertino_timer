@@ -1,7 +1,7 @@
 library cupertino_timer;
 
+import 'dart:ui';
 import 'package:flutter/material.dart';
-
 import 'timer_painter.dart';
 
 class CupertinoTimer extends StatefulWidget {
@@ -85,17 +85,16 @@ class CupertinoTimerState extends State<CupertinoTimer>
                   },
                 ),
                 Container(
-                  margin: const EdgeInsets.all(5),
-                  child: Align(
-                    alignment: FractionalOffset.center,
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: AnimatedBuilder(
-                          animation: controller,
-                          builder: (context, child) {
-                            return Text(getText(), style: widget.timeStyle);
-                          }),
-                    ),
+                  margin: const EdgeInsets.all(25),
+                  alignment: Alignment.center,
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: AnimatedBuilder(
+                        animation: controller,
+                        builder: (context, child) {
+                          return Text(getText(), style: TextStyle(fontFeatures: [FontFeature.tabularFigures()],
+                                                                          fontSize: MediaQuery.of(context).size.width * 100).merge(widget.timeStyle));
+                        }),
                   ),
                 ),
               ],

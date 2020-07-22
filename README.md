@@ -7,13 +7,13 @@ An iOS style timer widget.
 
 ### Basic
 ```
-CupertinoTimer(duration: new Duration(minutes 1))
+CupertinoTimer(duration: new Duration(minutes: 1))
 ```
 
 ### Advanced
 ```
 CupertinoTimer(
-    duration: new Duration(minutes 1),
+    duration: new Duration(minutes: 1),
     timeStyle: new TextStyle(fontSize: 24),
     startOnInit: true,
     ringColor: Colors.blue,

@@ -1,6 +1,6 @@
 name: cupertino_timer
-description: An iOS style countdown timer.
-version: 0.0.2-dev
+description: An iOS style countdown timer. Inspired by the native timer app on iOS.
+version: 0.0.4-dev
 repository: https://github.com/verygoodtechnologies/cupertino_timer
 
 environment:
