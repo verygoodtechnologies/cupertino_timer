@@ -20,9 +20,9 @@ class TimerPainter extends CustomPainter {
 
     final Paint paint = Paint()
       ..color = Colors.transparent
+      ..style = PaintingStyle.stroke
       ..strokeWidth = ringStroke
-      ..strokeCap = StrokeCap.round
-      ..style = PaintingStyle.stroke;
+      ..strokeCap = StrokeCap.round;
 
     canvas.drawCircle(size.center(Offset.zero), radius, paint);
 

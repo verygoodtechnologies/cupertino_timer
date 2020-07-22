@@ -2,7 +2,8 @@ library cupertino_timer;
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'timer_painter.dart';
+
+import 'src/timer_painter.dart';
 
 class CupertinoTimer extends StatefulWidget {
   CupertinoTimer({
@@ -29,11 +30,11 @@ class CupertinoTimer extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return CupertinoTimerState();
+    return _CupertinoTimerState();
   }
 }
 
-class CupertinoTimerState extends State<CupertinoTimer>
+class _CupertinoTimerState extends State<CupertinoTimer>
     with SingleTickerProviderStateMixin {
   AnimationController controller;
 
