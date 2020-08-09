@@ -21,3 +21,7 @@
 ## [0.0.6-dev] - July 22, 2020.
 
 * Patch Release: Add dartdoc.
+
+## [0.0.7-dev] - August 9, 2020.
+
+* Patch Release: Improve README

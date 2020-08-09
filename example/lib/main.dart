@@ -35,19 +35,22 @@ class _TimerHomePageState extends State<TimerHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
+              margin: EdgeInsets.all(20),
               width: 200,
               height: 200,
               child: CupertinoTimer(
-                duration: Duration(minutes: 5),
+                duration: Duration(minutes: 1),
               ),
             ),
             Container(
+              margin: EdgeInsets.all(20),
               width: 200,
               height: 200,
               child: CupertinoTimer(
-                duration: Duration(minutes: 5),
+                duration: Duration(minutes: 1),
                 startOnInit: true,
-                timeStyle: TextStyle(fontFamily: 'Avenir'),
+                timeStyle: TextStyle(
+                    fontFamily: 'Avenir Next', fontWeight: FontWeight.bold),
                 ringColor: Colors.blue,
                 ringStroke: 10,
               ),
