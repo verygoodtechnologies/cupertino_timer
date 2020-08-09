@@ -9,7 +9,7 @@ An iOS style timer widget.
 ```
 CupertinoTimer(duration: new Duration(minutes: 1))
 ```
-![Basic](/example/images/Basic.png)
+![Basic](https://github.com/verygoodtechnologies/cupertino_timer/blob/master/example/images/Basic.png?raw=true)
 
 ### Advanced
 ```
@@ -20,5 +20,5 @@ CupertinoTimer(
     ringColor: Colors.blue,
     ringStroke: 2)
 ```
-![Advanced](/example/images/Advanced.png)
+![Advanced](https://github.com/verygoodtechnologies/cupertino_timer/blob/master/example/images/Advanced.png?raw=true)
 
