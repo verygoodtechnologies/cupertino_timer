@@ -113,11 +113,23 @@
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">CupertinoTimer({
   Key key,
+
+  &#47;&#47; The duration of time the widget should countdown from.
   @required this.duration,
+
+  &#47;&#47; Function listener for current value.
   this.valueListener,
+
+  &#47;&#47; Whether or not the widget should start countdown after appearing.
   this.startOnInit = false,
+
+  &#47;&#47; Custom style of time string.
   this.timeStyle,
+
+  &#47;&#47; Color for timer circle, default is green.
   this.ringColor = Colors.green,
+
+  &#47;&#47; Width of the timer circle.
   this.ringStroke = 6.0,
 }) : super(key: key);</code></pre>
     </section>
@@ -132,7 +144,7 @@
 <footer>
   <span class="no-break">
     cupertino_timer
-      0.0.7-dev
+      0.0.8-dev
   </span>
 
 </footer>

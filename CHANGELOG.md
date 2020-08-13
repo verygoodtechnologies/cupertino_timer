@@ -1,3 +1,7 @@
+## [0.0.9-dev] - August 9, 2020.
+
+* Patch Release: Improve doc
+
 ## [0.0.8-dev] - August 9, 2020.
 
 * Patch Release: Repair broken image links

@@ -14,11 +14,12 @@ CupertinoTimer(duration: new Duration(minutes: 1))
 ### Advanced
 ```
 CupertinoTimer(
-    duration: new Duration(minutes: 1),
-    timeStyle: new TextStyle(fontSize: 24),
+    duration: Duration(minutes: 1),
     startOnInit: true,
+    timeStyle: TextStyle(
+        fontFamily: 'Avenir Next',
+        fontWeight: FontWeight.bold),
     ringColor: Colors.blue,
-    ringStroke: 2)
+    ringStroke: 10)
 ```
 ![Advanced](https://github.com/verygoodtechnologies/cupertino_timer/blob/master/example/images/Advanced.png?raw=true)
-

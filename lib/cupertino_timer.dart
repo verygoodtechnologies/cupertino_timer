@@ -8,11 +8,23 @@ import 'src/timer_painter.dart';
 class CupertinoTimer extends StatefulWidget {
   CupertinoTimer({
     Key key,
+
+    // The duration of time the widget should countdown from.
     @required this.duration,
+
+    // Function listener for current value.
     this.valueListener,
+
+    // Whether or not the widget should start countdown after appearing.
     this.startOnInit = false,
+
+    // Custom style of time string.
     this.timeStyle,
+
+    // Color for timer circle, default is green.
     this.ringColor = Colors.green,
+
+    // Width of the timer circle.
     this.ringStroke = 6.0,
   }) : super(key: key);
 
